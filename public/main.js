@@ -11,7 +11,7 @@ document
     })
       .then((response) => response.json())
       .then((data) => {
-        // response will be used to display the world
+        alert(data.message);
       })
       .catch((error) => {
         console.error("Error:", error);
