@@ -1,0 +1,19 @@
+{
+  "name": "schematicrenderer",
+  "version": "1.0.0",
+  "description": "Render schematic files in your browser",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwt2706/SchematicRenderer.git"
+  },
+  "author": "jwt2706",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/jwt2706/SchematicRenderer/issues"
+  },
+  "homepage": "https://github.com/jwt2706/SchematicRenderer#readme"
+}
