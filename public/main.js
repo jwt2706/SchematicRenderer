@@ -5,7 +5,7 @@ document
     var file = document.getElementById("schematic-file").files[0];
     var formData = new FormData();
     formData.append("file", file);
-    fetch("/upload", {
+    fetch("/api/upload", {
       method: "POST",
       body: formData,
     })
