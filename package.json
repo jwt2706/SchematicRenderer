@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jwt2706/SchematicRenderer/issues"
   },
-  "homepage": "https://github.com/jwt2706/SchematicRenderer#readme"
+  "homepage": "https://github.com/jwt2706/SchematicRenderer#readme",
+  "dependencies": {
+    "multer": "^1.4.5-lts.1"
+  }
 }
