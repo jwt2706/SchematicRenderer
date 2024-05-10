@@ -18,5 +18,8 @@
   "homepage": "https://github.com/jwt2706/SchematicRenderer#readme",
   "dependencies": {
     "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "@types/multer": "^1.4.11"
   }
 }
