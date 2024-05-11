@@ -11,7 +11,10 @@ document
     })
       .then((response) => response.json())
       .then((data) => {
-        alert(data.message);
+        var view = document.getElementById("viewer");
+        view.innerText = JSON.stringify(data, null, 2);
+
+        console.log(data.message);
       })
       .catch((error) => {
         console.error("Error:", error);
