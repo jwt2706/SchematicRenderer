@@ -29,7 +29,7 @@ export default (req, res) => {
           console.log(data.value); // This will log the parsed NBT data
 
           // Send a response back to the client
-          res.json({ message: "File received", data: data.value });
+          res.json({ message: "Success", data: data.value });
         });
       });
     });
