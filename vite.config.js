@@ -1,7 +1,7 @@
 export default {
   root: "frontend",
   build: {
-    outDir: "../public",
+    outDir: "../dist",
     rollupOptions: {
       external: ["multer", "prismarine-nbt"],
     },
