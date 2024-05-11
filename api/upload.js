@@ -1,9 +1,10 @@
-const multer = require("multer");
-const upload = multer({ dest: "/tmp/uploads/" });
-const nbt = require("prismarine-nbt");
-const fs = require("fs");
+import multer from "multer";
+import nbt from "prismarine-nbt";
+import fs from "fs";
 
-module.exports = (req, res) => {
+const upload = multer({ dest: "/tmp/uploads/" });
+
+export default (req, res) => {
   try {
     upload.single("file")(req, res, function (err) {
       if (err) {
