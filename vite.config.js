@@ -1,7 +1,4 @@
-import { defineConfig } from "vite";
-import copy from "vite-plugin-copy";
-
-export default defineConfig({
+export default {
   root: "frontend",
   build: {
     outDir: "../dist",
@@ -9,9 +6,4 @@ export default defineConfig({
       external: ["multer", "prismarine-nbt"],
     },
   },
-  plugins: [
-    copy({
-      targets: [{ src: "frontend/textures/*", dest: "dist/textures" }],
-    }),
-  ],
-});
+};
