@@ -1,5 +1,5 @@
 export default {
-  root: "frontend",
+  root: "src",
   build: {
     outDir: "../dist",
     rollupOptions: {
