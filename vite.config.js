@@ -1,6 +1,7 @@
+import { defineConfig } from "vite";
 import copy from "vite-plugin-copy";
 
-export default {
+export default defineConfig({
   root: "frontend",
   build: {
     outDir: "../dist",
@@ -13,4 +14,4 @@ export default {
       targets: [{ src: "frontend/textures/*", dest: "dist/textures" }],
     }),
   ],
-};
+});
