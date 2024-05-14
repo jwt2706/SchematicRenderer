@@ -1,20 +1,38 @@
 import * as THREE from "three";
 
+// Create a texture loader instance
+const loader = new THREE.TextureLoader();
+
 function createScene(data) {
   const scene = new THREE.Scene();
+
+  // Load a texture
+  const texture = loader.load("textures/cobblestone.png"); // the backend assosiates a number to each block. we can use that number to fetch the appropriate texture
 
   // create each block
   data.Palette.value.forEach((block, index) => {
     const geometry = new THREE.BoxGeometry(1, 1, 1);
     const material = new THREE.MeshBasicMaterial({
-      color: getColor(block.Name.value),
-    }); // TODO: implement getColor function that returns color based on block name
+      map: texture,
+    });
     const cube = new THREE.Mesh(geometry, material);
     cube.position.set(getPosition(index)); // TODO: implement getPosition function that returns position based on index
     scene.add(cube);
   });
 
   return scene;
+}
+
+function getPosition(index) {
+  const sizeX = 16; // width of the world in blocks
+  const sizeY = 16; // height of the world in blocks
+  const sizeZ = 16; // depth of the world in blocks
+
+  const x = index % sizeX;
+  const y = Math.floor(index / sizeX) % sizeY;
+  const z = Math.floor(index / (sizeX * sizeY)) % sizeZ;
+
+  return new THREE.Vector3(x, y, z);
 }
 
 function animate(renderer, scene, camera) {
