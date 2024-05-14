@@ -10,7 +10,7 @@
       "use": "@vercel/static"
     },
     {
-      "src": "public/**/*",
+      "src": "textures/**/*",
       "use": "@vercel/static"
     }
   ],
@@ -24,7 +24,7 @@
       "dest": "/dist/$1"
     },
     {
-      "src": "/public/(.*)",
+      "src": "/textures/(.*)",
       "dest": "/$1"
     }
   ]
