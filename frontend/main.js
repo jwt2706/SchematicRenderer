@@ -7,7 +7,7 @@ function createScene(data) {
   const scene = new THREE.Scene();
 
   // Load a texture
-  const texture = loader.load("textures/cobblestone.png"); // the backend assosiates a number to each block. we can use that number to fetch the appropriate texture
+  const texture = loader.load("/textures/cobblestone.png"); // the backend assosiates a number to each block. we can use that number to fetch the appropriate texture
 
   // create each block
   data.Palette.value.forEach((block, index) => {
