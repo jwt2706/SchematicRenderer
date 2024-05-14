@@ -1,3 +1,5 @@
+import copy from "vite-plugin-copy";
+
 export default {
   root: "frontend",
   build: {
@@ -6,4 +8,9 @@ export default {
       external: ["multer", "prismarine-nbt"],
     },
   },
+  plugins: [
+    copy({
+      targets: [{ src: "frontend/textures/*", dest: "dist/textures" }],
+    }),
+  ],
 };
